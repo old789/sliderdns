@@ -1,0 +1,33 @@
+# Конфигурация разбита на блоки, каждый блок относится к одному юзеру.
+# Блок начинается с директивы username, все последующие директивы до
+# следующего username относятся к тому имени, которым открыт блок.
+
+
+# Описание директив:
+
+# username user
+#
+# Задает имя пользователя.
+#
+
+# email mail@domain
+#
+# Email юзера, опционально, служит для оповещения
+#
+
+# hostname xxx.yyy.zzz
+#
+# описывает hostname, которое может изменять этот user
+
+# hostname xxx.yyy.zzz notify
+#
+# тоже самое, только добавляет оповещение юзера, если задан email
+
+username user1
+email user1@some.where.net
+hostname name1.some.where.net
+hostname name2.some.where.net notify
+hostname name3.some.where.net
+
+username user2
+hostname user2.another.net
